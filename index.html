@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]><html lang="ru" class="ie7 empty-layout"><![endif]-->
+<!--[if IE 8 ]><html lang="ru" class="ie8 empty-layout"><![endif]-->
+<!--[if IE 9 ]><html lang="ru" class="ie9 empty-layout"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="empty-layout" lang="ru"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1150,user-scalable=yes">
+    <meta name="keywords" content="Корзина заказов onliner.by">
+    <meta name="description" content="Корзина заказов onliner.by">
+    <title>Корзина заказов onliner.by</title>
+    <link rel="shortcut icon" href="https://gc.onliner.by/favicon.ico">
+    <!-- Icons -->
+    <!-- Common and Chrome: Android-->
+    <link rel="icon" type="image/x-icon" href="https://gc.onliner.by//images/logo/icons/favicon.ico">
+    <link rel="icon" type="image/png" href="https://gc.onliner.by//images/logo/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="https://gc.onliner.by//images/logo/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://gc.onliner.by//images/logo/icons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://gc.onliner.by//images/logo/icons/favicon-192x192.png" sizes="192x192">
+
+    <!-- Safari: iOS -->
+    <link rel="apple-touch-icon" sizes="60x60" href="https://gc.onliner.by//images/logo/icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://gc.onliner.by//images/logo/icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://gc.onliner.by//images/logo/icons/apple-touch-icon-180x180.png">
+
+    <!-- Colors -->
+    <!-- Chrome: Android-->
+    <meta name="theme-color" content="#246eb7">
+
+    <!-- Pinned Tabs -->
+    <!-- Safari: OS X -->
+    <link rel="mask-icon" href="https://gc.onliner.by//images/logo/icons/icon.svg" color="#ff0000">
+    <link rel="stylesheet" href="index_files/common_v3.css">
+    <link rel="stylesheet" type="text/css" href="index_files/mainpage_v3.css">
+    <link rel="stylesheet" href="index_files/empty-layout.css">
+    <!--[if lt IE 9]><script src="https://gc.onliner.by/js/html5.js?token=1489153962"></script><![endif]-->
+    <script async="" src="index_files/analytics.js"></script><script src="index_files/advertisement.js"></script>
+    <script src="index_files/common.js"></script>
+    
+    <link rel="stylesheet" href="index_files/app-4390ad2666.css">
+
+</head>
+
+<body class="no-touch">
+<!--Container-->
+<div id="container">
+    <div class="g-container-outer">
+<div class="l-gradient-wrapper">
+<!--Top-->
+<header class="g-top">
+    <div class="b-top-actions">
+        <div class="g-top-i">
+            <div class="b-top-logo">
+    <a href="https://www.onliner.by/">
+        <img src="index_files/onliner_logo.png" alt="Onliner" data-retina="https://gc.onliner.by/images/logo/onliner_logo.v3@2x.png?token=1489153962" class="onliner_logo retina-off" height="40" width="180">
+    </a>
+</div>
+            <div class="b-top-wrapper">
+                <div id="userbar" class="b-top-profile">
+    <div class="b-top-profile__user-account" data-bind="visible: $root.currentUser.id()" style="">
+        <!-- ko if: $root.currentUser.id() -->
+        <div class="image">
+            <a href="https://profile.onliner.by/">
+                <img data-bind="attr: {src: 'https://content.onliner.by/user/avatar/60x60/' + $root.currentUser.id()}" src="index_files/328820.png">
+            </a>
+        </div>
+        <!-- /ko -->
+        <p class="user-name">
+            <a href="https://profile.onliner.by/" data-bind="html: $root.currentUser.nickname">imperiz</a>
+        </p>
+        <ul class="user-bar cfix">
+            <li>
+                <a href="https://profile.onliner.by/messages">Cообщения</a>
+                <sup class="sup new-message" data-bind="text: $root.currentUser.new_messages,
+                                            css: {'new-message': $root.currentUser.new_messages() &gt; 0}">2</sup>
+            </li>
+            <li>
+                <a href="https://profile.onliner.by/bookmarks">Закладки</a>
+            </li>
+            <li>
+                <a class="exit" data-bind="attr: {href: 'https://profile.onliner.by/logout?redirect=https%3A%2F%2Fcart.onliner.by%2F&amp;key=' + $root.currentUser.logout_key()}" href="https://profile.onliner.by/logout?redirect=https%3A%2F%2Fcart.onliner.by%2F&amp;key=6e9634c979f139fa2f261011cc053f37">Выйти</a>
+            </li>
+        </ul>
+            </div>
+    <div class="auth-bar auth-bar--top" data-bind="visible: !$root.currentUser.id()" style="display: none;">
+        <div class="auth-bar__item auth-bar__item--text" onclick="MODELS.AuthController.showModalAuth()">Вход </div>
+        <div class="auth-bar__item auth-bar__item--facebook auth__icon auth__icon--facebook" data-bind="click: function () {$root.socialNetworksAuth.auth('facebook')}" title="Facebook"></div>
+        <div class="auth-bar__item auth-bar__item--vk auth__icon auth__icon--vk" data-bind="click: function () {$root.socialNetworksAuth.auth('vkontakte')}" title="ВКонтакте"></div>
+        <div class="auth-bar__item auth-bar__item--twitter auth__icon auth__icon--twitter" data-bind="click: function () {$root.socialNetworksAuth.auth('twitter')}" title="Twitter"></div>
+    </div>
+</div>
+
+
+<script>
+    (function () {
+                MODELS.currentUser.setData({"id":328820,"logout_key":"6e9634c979f139fa2f261011cc053f37","nickname":"imperiz","is_sms_validated":false});
+        
+        
+        var model = {
+                currentUser: MODELS.currentUser,
+                socialNetworksAuth: MODELS.socialNetworksAuth
+            },
+            networks = model.socialNetworksAuth.networks;
+
+        networks.facebook.sessionId = 'dDHmRYLaFOnIPWucGM7B';
+        networks.vkontakte.sessionId = 'InQUoiJ2qcXlOD3wSTbG';
+        networks.twitter.sessionId = 'FDuxRbo1hAvKjUNSgElw';
+
+        networks.facebook.url = "https://user.api.onliner.by/socials/facebook/login?session_id=dDHmRYLaFOnIPWucGM7B";
+        networks.vkontakte.url = "https://user.api.onliner.by/socials/vkontakte/login?session_id=InQUoiJ2qcXlOD3wSTbG";
+        networks.twitter.url = "https://user.api.onliner.by/socials/twitter/login?session_id=FDuxRbo1hAvKjUNSgElw";
+
+        ko.applyBindings(model, document.getElementById('userbar'));
+    })();
+</script>
+            </div>
+        </div>
+    </div>
+</header>
+<!--/Top-->
+
+<!--Middle-->
+<div class="g-middle">
+    <div class="g-middle-i">
+
+    <div class="cart-content">
+            <div class="cart-wrapper" id="cart-main-container" style="" data-bind="visible: true;">
+        <div class="cart-header">
+            <h1 class="cart-header__title">Корзина</h1>
+        </div>
+
+        <!-- ko if: $root.positionsList.status() === 'complete' && $root.positionsList.groups().length -->
+        <div class="cart-panels">
+
+            <!-- ko foreach: {data: $root.positionsList.groups, as: 'group'} -->
+            <div class="cart-panel">
+
+                <!-- ko template: {name: 'template-cart-position-header', data: group.shop} -->
+    <div class="cart-panel-header">
+
+        <!-- ko if: $data -->
+        <div class="cart-panel-header__part cart-panel-header__part_1">
+
+            <!-- ko if: $data.logo -->
+            <div class="cart-panel-header__preview">
+                <img class="cart-panel-header__image" data-bind="attr: {src: $data.logo, alt: $data.title}" src="index_files/88baa875d35ca80d214b2b60dd449638.gif" alt="SOCKET.BY">
+            </div>
+            <!-- /ko -->
+
+            <!-- ko if: !$data.logo --><!-- /ko -->
+
+            <!-- ko if: $data.reviews && $data.reviews.count -->
+            <div class="cart-panel-header-rating">
+                <span data-bind="attr: {class: 'cart-panel-header-rating__stars rating rating_' + Math.round($data.reviews.rating * 10 / 5) * 5}" class="cart-panel-header-rating__stars rating rating_50"></span>
+                <span class="cart-panel-header-rating__counts">
+                    <span data-bind="text: $data.reviews.count">1375</span>
+                    <span data-bind="text: $root.format.pluralForm($data.reviews.count, ['отзыв', 'отзыва', 'отзывов'])">отзывов</span>
+                </span>
+            </div>
+            <!-- /ko -->
+
+        </div>
+        <div class="cart-panel-header__part cart-panel-header__part_2">
+
+            <!-- ko if: $data.order_processing_text -->
+            <div class="cart-panel-header__time cart-panel-header__time_process">
+                <span data-bind="text: $data.order_processing_text">Обработка заказов производится с 09:00 до 22:00</span>
+            </div>
+            <!-- /ko -->
+
+            <!-- ko if: $root.positionsList.options.template.contacts -->
+            <!-- ko if: $data.display_address -->
+            <div class="cart-panel-header-contact" data-bind="with: $data.display_address">
+
+                <span class="cart-panel-header-contact__trigger">Контакты продавца</span>
+
+                <div class="cart-panel-header-contact__popover">
+                    <ul class="cart-panel-header-contact__list">
+
+                        <!-- ko foreach: {data: phones, as: 'phone'} -->
+                        <li class="cart-panel-header-contact__item cart-panel-header-contact__item_phone">
+                            <a class="cart-panel-header-contact__text" data-bind="attr: {href: 'tel:' + phone}" href="tel:+375336838844">
+                                <nobr data-bind="html: $root.format.phoneToHtml(phone)">+375 <b>33</b> 683-88-44</nobr>
+                            </a>
+                        </li>
+                        
+                        <li class="cart-panel-header-contact__item cart-panel-header-contact__item_phone">
+                            <a class="cart-panel-header-contact__text" data-bind="attr: {href: 'tel:' + phone}" href="tel:+375296838844">
+                                <nobr data-bind="html: $root.format.phoneToHtml(phone)">+375 <b>29</b> 683-88-44</nobr>
+                            </a>
+                        </li>
+                        
+                        <li class="cart-panel-header-contact__item cart-panel-header-contact__item_phone">
+                            <a class="cart-panel-header-contact__text" data-bind="attr: {href: 'tel:' + phone}" href="tel:+375256838844">
+                                <nobr data-bind="html: $root.format.phoneToHtml(phone)">+375 <b>25</b> 683-88-44</nobr>
+                            </a>
+                        </li>
+                        
+                        <li class="cart-panel-header-contact__item cart-panel-header-contact__item_phone">
+                            <a class="cart-panel-header-contact__text" data-bind="attr: {href: 'tel:' + phone}" href="tel:+375172374208">
+                                <nobr data-bind="html: $root.format.phoneToHtml(phone)">+375 <b>17</b> 237-42-08</nobr>
+                            </a>
+                        </li>
+                        
+                        <li class="cart-panel-header-contact__item cart-panel-header-contact__item_phone">
+                            <a class="cart-panel-header-contact__text" data-bind="attr: {href: 'tel:' + phone}" href="tel:+375172374064">
+                                <nobr data-bind="html: $root.format.phoneToHtml(phone)">+375 <b>17</b> 237-40-64</nobr>
+                            </a>
+                        </li>
+                        <!-- /ko -->
+
+                        <!-- ko if: skype -->
+                        <li class="cart-panel-header-contact__item cart-panel-header-contact__item_skype">
+                            <a class="cart-panel-header-contact__link" data-bind="attr: {href: 'skype:' + skype + '?chat'}" href="skype:socketby3?chat">
+                                <strong><nobr data-bind="text: skype">socketby3</nobr></strong>
+                            </a>
+                        </li>
+                        <!-- /ko -->
+
+                        <!-- ko if: whats_app --><!-- /ko -->
+
+                        <!-- ko if: telegram -->
+                        <li class="cart-panel-header-contact__item cart-panel-header-contact__item_telegram">
+                            <span class="cart-panel-header-contact__text">
+                                <nobr data-bind="html: $root.format.phoneToHtml(telegram)">+375 <b>33</b> 683-88-44</nobr>
+                            </span>
+                        </li>
+                        <!-- /ko -->
+
+                        <!-- ko if: viber -->
+                        <li class="cart-panel-header-contact__item cart-panel-header-contact__item_viber">
+                            <span class="cart-panel-header-contact__text">
+                                <nobr data-bind="html: $root.format.phoneToHtml(viber)">+375 <b>29</b> 552-22-25</nobr>
+                            </span>
+                        </li>
+                        <!-- /ko -->
+                    </ul>
+                </div>
+
+            </div>
+            <!-- /ko -->
+            <!-- /ko -->
+
+        </div>
+        <!-- /ko -->
+
+    </div>
+<!-- /ko -->
+
+                <div class="cart-panel-body">
+                    <div class="cart-products">
+
+                        <!-- ko foreach: {data: group.positions, as: 'position'} -->
+                        <!-- ko template: {name: 'template-cart-position'} -->
+    <div class="cart-product" data-bind="css: {'cart-product_disabled': !$data.position, 'cart-product_error': error()},
+                    attr: {id: 'cart-product-' + $data.id}" id="cart-product-500913">
+        <div class="cart-product__part cart-product__part_1">
+
+            <!-- ko template: {name: 'template-cart-position-preview', data: $data.product} -->
+
+    <!-- ko if: $data.images.header -->
+    <div class="cart-product__preview">
+        <img data-bind="attr: {src: $data.images.header, alt: $data.full_name, title: $data.full_name}" class="cart-product__image" src="index_files/11435570cb11aa51d925002a055911a4.jpg" alt="Zalman ZM500-LX 500W" title="Zalman ZM500-LX 500W">
+    </div>
+    <!-- /ko -->
+
+    <!-- ko if: !$data.images.header --><!-- /ko -->
+
+<!-- /ko -->
+
+        </div>
+        <div class="cart-product__part cart-product__part_2">
+            <div class="cart-product-title">
+                <div class="cart-product-title__link cart-product-title__link_name">
+                    <span data-bind="html: $data.product.full_name">Zalman ZM500-LX 500W</span>
+                </div>
+            </div>
+
+            <div class="cart-product__description">
+                <span data-bind="html: $data.product.description">активная PFC, вентилятор 1x120 мм, 12V 37 А</span>
+            </div>
+            <!-- ko if: $data.position && $data.position.comment -->
+            <div class="cart-product__additional">
+                <span data-bind="text: $data.position.comment">Код 
+товара: 5774.  Грамотная консультация. Доставка по РБ. Оплата по 
+безналу, картой и ЕРИП. Кредит. Самовывоз ст. м. Фрунзенская. Socket.by -
+ свыше 45000 товаров. Скидки постоянным клиентам и участникам группы 
+vk.com/socketby</span>
+            </div>
+            <!-- /ko -->
+
+            <!-- ko if: $root.positionsList.options.template.comment --><!-- /ko -->
+        </div>
+        <div class="cart-product__part cart-product__part_3">
+            <div class="cart-product-add-box">
+                <span class="button-style button-style_auxiliary button-style_small cart-product-add-box__button cart-product-add-box__button_remove button-style_disabled" data-bind="click: $root.positionsList.addQuantity.bind($root.positionsList, $data, -1),
+                                 css: {'button-style_disabled': $data.quantity() === '' || $data.quantity() &lt;= 1}"></span>
+                <span class="cart-product-add-box__control">
+                    <input placeholder="" maxlength="2" class="input-style input-style_primary input-style_small cart-product-add-box__input" data-bind="value: $data.quantity,
+                                      valueUpdate: 'input',
+                                      event: {'blur': $root.positionsList.blurQuantityInput.bind($root.positionsList, $data)},
+                                      css: {'input-style_disabled': !$data.position}" value="1" type="text">
+                </span>
+                <span class="button-style button-style_auxiliary button-style_small cart-product-add-box__button cart-product-add-box__button_add" data-bind="click: $root.positionsList.addQuantity.bind($root.positionsList, $data, 1),
+                                 css: {'button-style_disabled': $data.quantity() === '' || $data.quantity() &gt;= 10}"></span>
+            </div>
+        </div>
+        <div class="cart-product__part cart-product__part_4">
+
+            <!-- ko if: !$data.position --><!-- /ko -->
+
+            <!-- ko if: $data.position -->
+                <div class="cart-product__price">
+                    <span class="cart-product__price-value cart-product__price-value_primary">
+                        <span data-bind="html: $root.format.positionPrice($data.position.position_price)">84,63&nbsp;р.</span>
+                    </span>
+                </div>
+
+                <!-- ko if: !error() -->
+                <div class="cart-product-note">
+                    <!-- ko template: {name: 'template-cart-position-delivery', data: $data.position.delivery} -->
+    <div>
+        <!-- ko if: !$data.town.time && !$data.country.time --><!-- /ko -->
+
+        <!-- ko if: $data.town.time || $data.country.time -->
+        Доставка
+
+        <!-- ko if: $data.town.time -->
+        по&nbsp;городу&nbsp;— в&nbsp;течение <span data-bind="html: $data.town.time === 1 ? 'дня' : $data.town.time + '&nbsp;' + $root.format.pluralForm($data.town.time, ['дня', 'дней', 'дней'])">дня</span>,
+        <span data-bind="html: $data.town.price ? ('стоимость&nbsp;— ' + $root.format.positionPrice($data.town.delivery_price)) : 'бесплатная.'">стоимость&nbsp;— 4,00&nbsp;р.</span>
+        <!-- /ko -->
+
+        <!-- ko if: !$data.town.time --><!-- /ko -->
+
+        Доставка
+
+        <!-- ko if: $data.country.time -->
+        по&nbsp;Беларуси&nbsp;— в&nbsp;течение <span data-bind="html: $data.country.time === 1 ? 'дня' : $data.country.time + '&nbsp;' + $root.format.pluralForm($data.country.time, ['дня', 'дней', 'дней'])">2&nbsp;дней</span>,
+        <span data-bind="html: $data.country.price ? ('стоимость от&nbsp;' + $root.format.positionPrice($data.country.delivery_price)) : 'бесплатная.'">стоимость от&nbsp;14,00&nbsp;р.</span>
+        <!-- /ko -->
+
+        <!-- ko if: !$data.country.time --><!-- /ko -->
+
+        <!-- /ko -->
+    </div>
+<!-- /ko -->
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: error() --><!-- /ko -->
+
+            <!-- /ko -->
+        </div>
+        <div class="cart-product__part cart-product__part_5">
+            <a class="cart-product__remove" title="Удалить" data-bind="click: $root.positionsList.removePosition.bind($root.positionsList, $data)"></a>
+        </div>
+    </div>
+<!-- /ko -->
+                        
+                        <!-- ko template: {name: 'template-cart-position'} -->
+    <div class="cart-product" data-bind="css: {'cart-product_disabled': !$data.position, 'cart-product_error': error()},
+                    attr: {id: 'cart-product-' + $data.id}" id="cart-product-500875">
+        <div class="cart-product__part cart-product__part_1">
+
+            <!-- ko template: {name: 'template-cart-position-preview', data: $data.product} -->
+
+    <!-- ko if: $data.images.header -->
+    <div class="cart-product__preview">
+        <img data-bind="attr: {src: $data.images.header, alt: $data.full_name, title: $data.full_name}" class="cart-product__image" src="index_files/0e4278af30e81710005cfdfa65d58925.jpg" alt="Zalman ZM-T4" title="Zalman ZM-T4">
+    </div>
+    <!-- /ko -->
+
+    <!-- ko if: !$data.images.header --><!-- /ko -->
+
+<!-- /ko -->
+
+        </div>
+        <div class="cart-product__part cart-product__part_2">
+            <div class="cart-product-title">
+                <div class="cart-product-title__link cart-product-title__link_name">
+                    <span data-bind="html: $data.product.full_name">Zalman ZM-T4</span>
+                </div>
+            </div>
+
+            <div class="cart-product__description">
+                <span data-bind="html: $data.product.description">без блока питания, Tower, для плат micro-ATX/mini-ITX, блок питания снизу, 1 вентилятор, 1xUSB 2.0, 1xUSB 3.0, цвет черный</span>
+            </div>
+            <!-- ko if: $data.position && $data.position.comment -->
+            <div class="cart-product__additional">
+                <span data-bind="text: $data.position.comment">Код 
+товара: 41864.  Грамотная консультация. Доставка по РБ. Оплата по 
+безналу, картой и ЕРИП. Кредит. Самовывоз ст. м. Фрунзенская. Socket.by -
+ свыше 45000 товаров. Скидки постоянным клиентам и участникам группы 
+vk.com/socketby</span>
+            </div>
+            <!-- /ko -->
+
+            <!-- ko if: $root.positionsList.options.template.comment --><!-- /ko -->
+        </div>
+        <div class="cart-product__part cart-product__part_3">
+            <div class="cart-product-add-box">
+                <span class="button-style button-style_auxiliary button-style_small cart-product-add-box__button cart-product-add-box__button_remove button-style_disabled" data-bind="click: $root.positionsList.addQuantity.bind($root.positionsList, $data, -1),
+                                 css: {'button-style_disabled': $data.quantity() === '' || $data.quantity() &lt;= 1}"></span>
+                <span class="cart-product-add-box__control">
+                    <input placeholder="" maxlength="2" class="input-style input-style_primary input-style_small cart-product-add-box__input" data-bind="value: $data.quantity,
+                                      valueUpdate: 'input',
+                                      event: {'blur': $root.positionsList.blurQuantityInput.bind($root.positionsList, $data)},
+                                      css: {'input-style_disabled': !$data.position}" value="1" type="text">
+                </span>
+                <span class="button-style button-style_auxiliary button-style_small cart-product-add-box__button cart-product-add-box__button_add" data-bind="click: $root.positionsList.addQuantity.bind($root.positionsList, $data, 1),
+                                 css: {'button-style_disabled': $data.quantity() === '' || $data.quantity() &gt;= 10}"></span>
+            </div>
+        </div>
+        <div class="cart-product__part cart-product__part_4">
+
+            <!-- ko if: !$data.position --><!-- /ko -->
+
+            <!-- ko if: $data.position -->
+                <div class="cart-product__price">
+                    <span class="cart-product__price-value cart-product__price-value_primary">
+                        <span data-bind="html: $root.format.positionPrice($data.position.position_price)">49,99&nbsp;р.</span>
+                    </span>
+                </div>
+
+                <!-- ko if: !error() -->
+                <div class="cart-product-note">
+                    <!-- ko template: {name: 'template-cart-position-delivery', data: $data.position.delivery} -->
+    <div>
+        <!-- ko if: !$data.town.time && !$data.country.time --><!-- /ko -->
+
+        <!-- ko if: $data.town.time || $data.country.time -->
+        Доставка
+
+        <!-- ko if: $data.town.time -->
+        по&nbsp;городу&nbsp;— в&nbsp;течение <span data-bind="html: $data.town.time === 1 ? 'дня' : $data.town.time + '&nbsp;' + $root.format.pluralForm($data.town.time, ['дня', 'дней', 'дней'])">дня</span>,
+        <span data-bind="html: $data.town.price ? ('стоимость&nbsp;— ' + $root.format.positionPrice($data.town.delivery_price)) : 'бесплатная.'">стоимость&nbsp;— 4,00&nbsp;р.</span>
+        <!-- /ko -->
+
+        <!-- ko if: !$data.town.time --><!-- /ko -->
+
+        Доставка
+
+        <!-- ko if: $data.country.time -->
+        по&nbsp;Беларуси&nbsp;— в&nbsp;течение <span data-bind="html: $data.country.time === 1 ? 'дня' : $data.country.time + '&nbsp;' + $root.format.pluralForm($data.country.time, ['дня', 'дней', 'дней'])">2&nbsp;дней</span>,
+        <span data-bind="html: $data.country.price ? ('стоимость от&nbsp;' + $root.format.positionPrice($data.country.delivery_price)) : 'бесплатная.'">стоимость от&nbsp;14,00&nbsp;р.</span>
+        <!-- /ko -->
+
+        <!-- ko if: !$data.country.time --><!-- /ko -->
+
+        <!-- /ko -->
+    </div>
+<!-- /ko -->
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: error() --><!-- /ko -->
+
+            <!-- /ko -->
+        </div>
+        <div class="cart-product__part cart-product__part_5">
+            <a class="cart-product__remove" title="Удалить" data-bind="click: $root.positionsList.removePosition.bind($root.positionsList, $data)"></a>
+        </div>
+    </div>
+<!-- /ko -->
+                        
+                        <!-- ko template: {name: 'template-cart-position'} -->
+    <div class="cart-product" data-bind="css: {'cart-product_disabled': !$data.position, 'cart-product_error': error()},
+                    attr: {id: 'cart-product-' + $data.id}" id="cart-product-500780">
+        <div class="cart-product__part cart-product__part_1">
+
+            <!-- ko template: {name: 'template-cart-position-preview', data: $data.product} -->
+
+    <!-- ko if: $data.images.header -->
+    <div class="cart-product__preview">
+        <img data-bind="attr: {src: $data.images.header, alt: $data.full_name, title: $data.full_name}" class="cart-product__image" src="index_files/3b2fa1532cbca778f1d6709cbd869dea.jpg" alt="Palit GeForce GTX 750 Ti StormX Dual 2GB GDDR5 (NE5X75TT1341-1073F)" title="Palit GeForce GTX 750 Ti StormX Dual 2GB GDDR5 (NE5X75TT1341-1073F)">
+    </div>
+    <!-- /ko -->
+
+    <!-- ko if: !$data.images.header --><!-- /ko -->
+
+<!-- /ko -->
+
+        </div>
+        <div class="cart-product__part cart-product__part_2">
+            <div class="cart-product-title">
+                <div class="cart-product-title__link cart-product-title__link_name">
+                    <span data-bind="html: $data.product.full_name">Palit GeForce GTX 750 Ti StormX Dual 2GB GDDR5 (NE5X75TT1341-1073F)</span>
+                </div>
+            </div>
+
+            <div class="cart-product__description">
+                <span data-bind="html: $data.product.description">GPU 1202 МГц (640sp), RAM 1502 МГц 128 бит, DirectX 11.2, VGA, DVI, miniHDMI</span>
+            </div>
+            <!-- ko if: $data.position && $data.position.comment -->
+            <div class="cart-product__additional">
+                <span data-bind="text: $data.position.comment">Код 
+товара: 58149.  Грамотная консультация. Доставка по РБ. Оплата по 
+безналу, картой и ЕРИП. Кредит. Самовывоз ст. м. Фрунзенская. Socket.by -
+ свыше 45000 товаров. Скидки постоянным клиентам и участникам группы 
+vk.com/socketby</span>
+            </div>
+            <!-- /ko -->
+
+            <!-- ko if: $root.positionsList.options.template.comment --><!-- /ko -->
+        </div>
+        <div class="cart-product__part cart-product__part_3">
+            <div class="cart-product-add-box">
+                <span class="button-style button-style_auxiliary button-style_small cart-product-add-box__button cart-product-add-box__button_remove button-style_disabled" data-bind="click: $root.positionsList.addQuantity.bind($root.positionsList, $data, -1),
+                                 css: {'button-style_disabled': $data.quantity() === '' || $data.quantity() &lt;= 1}"></span>
+                <span class="cart-product-add-box__control">
+                    <input placeholder="" maxlength="2" class="input-style input-style_primary input-style_small cart-product-add-box__input" data-bind="value: $data.quantity,
+                                      valueUpdate: 'input',
+                                      event: {'blur': $root.positionsList.blurQuantityInput.bind($root.positionsList, $data)},
+                                      css: {'input-style_disabled': !$data.position}" value="1" type="text">
+                </span>
+                <span class="button-style button-style_auxiliary button-style_small cart-product-add-box__button cart-product-add-box__button_add" data-bind="click: $root.positionsList.addQuantity.bind($root.positionsList, $data, 1),
+                                 css: {'button-style_disabled': $data.quantity() === '' || $data.quantity() &gt;= 10}"></span>
+            </div>
+        </div>
+        <div class="cart-product__part cart-product__part_4">
+
+            <!-- ko if: !$data.position --><!-- /ko -->
+
+            <!-- ko if: $data.position -->
+                <div class="cart-product__price">
+                    <span class="cart-product__price-value cart-product__price-value_primary">
+                        <span data-bind="html: $root.format.positionPrice($data.position.position_price)">237,07&nbsp;р.</span>
+                    </span>
+                </div>
+
+                <!-- ko if: !error() -->
+                <div class="cart-product-note">
+                    <!-- ko template: {name: 'template-cart-position-delivery', data: $data.position.delivery} -->
+    <div>
+        <!-- ko if: !$data.town.time && !$data.country.time --><!-- /ko -->
+
+        <!-- ko if: $data.town.time || $data.country.time -->
+        Доставка
+
+        <!-- ko if: $data.town.time -->
+        по&nbsp;городу&nbsp;— в&nbsp;течение <span data-bind="html: $data.town.time === 1 ? 'дня' : $data.town.time + '&nbsp;' + $root.format.pluralForm($data.town.time, ['дня', 'дней', 'дней'])">дня</span>,
+        <span data-bind="html: $data.town.price ? ('стоимость&nbsp;— ' + $root.format.positionPrice($data.town.delivery_price)) : 'бесплатная.'">бесплатная.</span>
+        <!-- /ko -->
+
+        <!-- ko if: !$data.town.time --><!-- /ko -->
+
+        Доставка
+
+        <!-- ko if: $data.country.time -->
+        по&nbsp;Беларуси&nbsp;— в&nbsp;течение <span data-bind="html: $data.country.time === 1 ? 'дня' : $data.country.time + '&nbsp;' + $root.format.pluralForm($data.country.time, ['дня', 'дней', 'дней'])">2&nbsp;дней</span>,
+        <span data-bind="html: $data.country.price ? ('стоимость от&nbsp;' + $root.format.positionPrice($data.country.delivery_price)) : 'бесплатная.'">стоимость от&nbsp;14,00&nbsp;р.</span>
+        <!-- /ko -->
+
+        <!-- ko if: !$data.country.time --><!-- /ko -->
+
+        <!-- /ko -->
+    </div>
+<!-- /ko -->
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: error() --><!-- /ko -->
+
+            <!-- /ko -->
+        </div>
+        <div class="cart-product__part cart-product__part_5">
+            <a class="cart-product__remove" title="Удалить" data-bind="click: $root.positionsList.removePosition.bind($root.positionsList, $data)"></a>
+        </div>
+    </div>
+<!-- /ko -->
+                        
+                        <!-- ko template: {name: 'template-cart-position'} -->
+    <div class="cart-product" data-bind="css: {'cart-product_disabled': !$data.position, 'cart-product_error': error()},
+                    attr: {id: 'cart-product-' + $data.id}" id="cart-product-500948">
+        <div class="cart-product__part cart-product__part_1">
+
+            <!-- ko template: {name: 'template-cart-position-preview', data: $data.product} -->
+
+    <!-- ko if: $data.images.header -->
+    <div class="cart-product__preview">
+        <img data-bind="attr: {src: $data.images.header, alt: $data.full_name, title: $data.full_name}" class="cart-product__image" src="index_files/9009cfb048247e55e5e1c49541bf41a0.jpg" alt="Intel Core i3-6100 (BOX)" title="Intel Core i3-6100 (BOX)">
+    </div>
+    <!-- /ko -->
+
+    <!-- ko if: !$data.images.header --><!-- /ko -->
+
+<!-- /ko -->
+
+        </div>
+        <div class="cart-product__part cart-product__part_2">
+            <div class="cart-product-title">
+                <div class="cart-product-title__link cart-product-title__link_name">
+                    <span data-bind="html: $data.product.full_name">Intel Core i3-6100 (BOX)</span>
+                </div>
+            </div>
+
+            <div class="cart-product__description">
+                <span data-bind="html: $data.product.description">Skylake, 2 ядра, частота 3.7 ГГц + 3&nbsp;МБ, техпроцесс 14 нм, сокет LGA1151, TDP 51W</span>
+            </div>
+            <!-- ko if: $data.position && $data.position.comment -->
+            <div class="cart-product__additional">
+                <span data-bind="text: $data.position.comment">Код 
+товара: 112108 - BOX  Грамотная консультация. Доставка по РБ. Оплата по 
+безналу, картой и ЕРИП. Кредит. Самовывоз ст. м. Фрунзенская. Socket.by -
+ свыше 45000 товаров. Скидки постоянным клиентам и участникам группы 
+vk.com/socketby</span>
+            </div>
+            <!-- /ko -->
+
+            <!-- ko if: $root.positionsList.options.template.comment --><!-- /ko -->
+        </div>
+        <div class="cart-product__part cart-product__part_3">
+            <div class="cart-product-add-box">
+                <span class="button-style button-style_auxiliary button-style_small cart-product-add-box__button cart-product-add-box__button_remove button-style_disabled" data-bind="click: $root.positionsList.addQuantity.bind($root.positionsList, $data, -1),
+                                 css: {'button-style_disabled': $data.quantity() === '' || $data.quantity() &lt;= 1}"></span>
+                <span class="cart-product-add-box__control">
+                    <input placeholder="" maxlength="2" class="input-style input-style_primary input-style_small cart-product-add-box__input" data-bind="value: $data.quantity,
+                                      valueUpdate: 'input',
+                                      event: {'blur': $root.positionsList.blurQuantityInput.bind($root.positionsList, $data)},
+                                      css: {'input-style_disabled': !$data.position}" value="1" type="text">
+                </span>
+                <span class="button-style button-style_auxiliary button-style_small cart-product-add-box__button cart-product-add-box__button_add" data-bind="click: $root.positionsList.addQuantity.bind($root.positionsList, $data, 1),
+                                 css: {'button-style_disabled': $data.quantity() === '' || $data.quantity() &gt;= 10}"></span>
+            </div>
+        </div>
+        <div class="cart-product__part cart-product__part_4">
+
+            <!-- ko if: !$data.position --><!-- /ko -->
+
+            <!-- ko if: $data.position -->
+                <div class="cart-product__price">
+                    <span class="cart-product__price-value cart-product__price-value_primary">
+                        <span data-bind="html: $root.format.positionPrice($data.position.position_price)">222,29&nbsp;р.</span>
+                    </span>
+                </div>
+
+                <!-- ko if: !error() -->
+                <div class="cart-product-note">
+                    <!-- ko template: {name: 'template-cart-position-delivery', data: $data.position.delivery} -->
+    <div>
+        <!-- ko if: !$data.town.time && !$data.country.time --><!-- /ko -->
+
+        <!-- ko if: $data.town.time || $data.country.time -->
+        Доставка
+
+        <!-- ko if: $data.town.time -->
+        по&nbsp;городу&nbsp;— в&nbsp;течение <span data-bind="html: $data.town.time === 1 ? 'дня' : $data.town.time + '&nbsp;' + $root.format.pluralForm($data.town.time, ['дня', 'дней', 'дней'])">дня</span>,
+        <span data-bind="html: $data.town.price ? ('стоимость&nbsp;— ' + $root.format.positionPrice($data.town.delivery_price)) : 'бесплатная.'">стоимость&nbsp;— 4,00&nbsp;р.</span>
+        <!-- /ko -->
+
+        <!-- ko if: !$data.town.time --><!-- /ko -->
+
+        Доставка
+
+        <!-- ko if: $data.country.time -->
+        по&nbsp;Беларуси&nbsp;— в&nbsp;течение <span data-bind="html: $data.country.time === 1 ? 'дня' : $data.country.time + '&nbsp;' + $root.format.pluralForm($data.country.time, ['дня', 'дней', 'дней'])">2&nbsp;дней</span>,
+        <span data-bind="html: $data.country.price ? ('стоимость от&nbsp;' + $root.format.positionPrice($data.country.delivery_price)) : 'бесплатная.'">стоимость от&nbsp;14,00&nbsp;р.</span>
+        <!-- /ko -->
+
+        <!-- ko if: !$data.country.time --><!-- /ko -->
+
+        <!-- /ko -->
+    </div>
+<!-- /ko -->
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: error() --><!-- /ko -->
+
+            <!-- /ko -->
+        </div>
+        <div class="cart-product__part cart-product__part_5">
+            <a class="cart-product__remove" title="Удалить" data-bind="click: $root.positionsList.removePosition.bind($root.positionsList, $data)"></a>
+        </div>
+    </div>
+<!-- /ko -->
+                        
+                        <!-- ko template: {name: 'template-cart-position'} -->
+    <div class="cart-product" data-bind="css: {'cart-product_disabled': !$data.position, 'cart-product_error': error()},
+                    attr: {id: 'cart-product-' + $data.id}" id="cart-product-500950">
+        <div class="cart-product__part cart-product__part_1">
+
+            <!-- ko template: {name: 'template-cart-position-preview', data: $data.product} -->
+
+    <!-- ko if: $data.images.header -->
+    <div class="cart-product__preview">
+        <img data-bind="attr: {src: $data.images.header, alt: $data.full_name, title: $data.full_name}" class="cart-product__image" src="index_files/2ce8f76e46691b915ce6e8c911eb00d3.png" alt="Crucial 8GB DDR4 PC4-17000 [CT8G4DFS8213]" title="Crucial 8GB DDR4 PC4-17000 [CT8G4DFS8213]">
+    </div>
+    <!-- /ko -->
+
+    <!-- ko if: !$data.images.header --><!-- /ko -->
+
+<!-- /ko -->
+
+        </div>
+        <div class="cart-product__part cart-product__part_2">
+            <div class="cart-product-title">
+                <div class="cart-product-title__link cart-product-title__link_name">
+                    <span data-bind="html: $data.product.full_name">Crucial 8GB DDR4 PC4-17000 [CT8G4DFS8213]</span>
+                </div>
+            </div>
+
+            <div class="cart-product__description">
+                <span data-bind="html: $data.product.description">одноканальный (1 модуль), частота 2133 МГц, CL 15T, напряжение 1.2 В</span>
+            </div>
+            <!-- ko if: $data.position && $data.position.comment -->
+            <div class="cart-product__additional">
+                <span data-bind="text: $data.position.comment">Код 
+товара: 126082.  Грамотная консультация. Доставка по РБ. Оплата по 
+безналу, картой и ЕРИП. Кредит. Самовывоз ст. м. Фрунзенская. Socket.by -
+ свыше 45000 товаров. Скидки постоянным клиентам и участникам группы 
+vk.com/socketby</span>
+            </div>
+            <!-- /ko -->
+
+            <!-- ko if: $root.positionsList.options.template.comment --><!-- /ko -->
+        </div>
+        <div class="cart-product__part cart-product__part_3">
+            <div class="cart-product-add-box">
+                <span class="button-style button-style_auxiliary button-style_small cart-product-add-box__button cart-product-add-box__button_remove button-style_disabled" data-bind="click: $root.positionsList.addQuantity.bind($root.positionsList, $data, -1),
+                                 css: {'button-style_disabled': $data.quantity() === '' || $data.quantity() &lt;= 1}"></span>
+                <span class="cart-product-add-box__control">
+                    <input placeholder="" maxlength="2" class="input-style input-style_primary input-style_small cart-product-add-box__input" data-bind="value: $data.quantity,
+                                      valueUpdate: 'input',
+                                      event: {'blur': $root.positionsList.blurQuantityInput.bind($root.positionsList, $data)},
+                                      css: {'input-style_disabled': !$data.position}" value="1" type="text">
+                </span>
+                <span class="button-style button-style_auxiliary button-style_small cart-product-add-box__button cart-product-add-box__button_add" data-bind="click: $root.positionsList.addQuantity.bind($root.positionsList, $data, 1),
+                                 css: {'button-style_disabled': $data.quantity() === '' || $data.quantity() &gt;= 10}"></span>
+            </div>
+        </div>
+        <div class="cart-product__part cart-product__part_4">
+
+            <!-- ko if: !$data.position --><!-- /ko -->
+
+            <!-- ko if: $data.position -->
+                <div class="cart-product__price">
+                    <span class="cart-product__price-value cart-product__price-value_primary">
+                        <span data-bind="html: $root.format.positionPrice($data.position.position_price)">109,63&nbsp;р.</span>
+                    </span>
+                </div>
+
+                <!-- ko if: !error() -->
+                <div class="cart-product-note">
+                    <!-- ko template: {name: 'template-cart-position-delivery', data: $data.position.delivery} -->
+    <div>
+        <!-- ko if: !$data.town.time && !$data.country.time --><!-- /ko -->
+
+        <!-- ko if: $data.town.time || $data.country.time -->
+        Доставка
+
+        <!-- ko if: $data.town.time -->
+        по&nbsp;городу&nbsp;— в&nbsp;течение <span data-bind="html: $data.town.time === 1 ? 'дня' : $data.town.time + '&nbsp;' + $root.format.pluralForm($data.town.time, ['дня', 'дней', 'дней'])">дня</span>,
+        <span data-bind="html: $data.town.price ? ('стоимость&nbsp;— ' + $root.format.positionPrice($data.town.delivery_price)) : 'бесплатная.'">бесплатная.</span>
+        <!-- /ko -->
+
+        <!-- ko if: !$data.town.time --><!-- /ko -->
+
+        Доставка
+
+        <!-- ko if: $data.country.time -->
+        по&nbsp;Беларуси&nbsp;— в&nbsp;течение <span data-bind="html: $data.country.time === 1 ? 'дня' : $data.country.time + '&nbsp;' + $root.format.pluralForm($data.country.time, ['дня', 'дней', 'дней'])">2&nbsp;дней</span>,
+        <span data-bind="html: $data.country.price ? ('стоимость от&nbsp;' + $root.format.positionPrice($data.country.delivery_price)) : 'бесплатная.'">стоимость от&nbsp;14,00&nbsp;р.</span>
+        <!-- /ko -->
+
+        <!-- ko if: !$data.country.time --><!-- /ko -->
+
+        <!-- /ko -->
+    </div>
+<!-- /ko -->
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: error() --><!-- /ko -->
+
+            <!-- /ko -->
+        </div>
+        <div class="cart-product__part cart-product__part_5">
+            <a class="cart-product__remove" title="Удалить" data-bind="click: $root.positionsList.removePosition.bind($root.positionsList, $data)"></a>
+        </div>
+    </div>
+<!-- /ko -->
+                        
+                        <!-- ko template: {name: 'template-cart-position'} -->
+    <div class="cart-product" data-bind="css: {'cart-product_disabled': !$data.position, 'cart-product_error': error()},
+                    attr: {id: 'cart-product-' + $data.id}" id="cart-product-500947">
+        <div class="cart-product__part cart-product__part_1">
+
+            <!-- ko template: {name: 'template-cart-position-preview', data: $data.product} -->
+
+    <!-- ko if: $data.images.header -->
+    <div class="cart-product__preview">
+        <img data-bind="attr: {src: $data.images.header, alt: $data.full_name, title: $data.full_name}" class="cart-product__image" src="index_files/a8bf05669eee0e2a2c0811289ebf1693.jpg" alt="ASUS H110M-R/C/SI" title="ASUS H110M-R/C/SI">
+    </div>
+    <!-- /ko -->
+
+    <!-- ko if: !$data.images.header --><!-- /ko -->
+
+<!-- /ko -->
+
+        </div>
+        <div class="cart-product__part cart-product__part_2">
+            <div class="cart-product-title">
+                <div class="cart-product-title__link cart-product-title__link_name">
+                    <span data-bind="html: $data.product.full_name">ASUS H110M-R/C/SI</span>
+                </div>
+            </div>
+
+            <div class="cart-product__description">
+                <span data-bind="html: $data.product.description">mATX, сокет Intel LGA1151, чипсет Intel H110, память 2xDDR4, слоты: 1xPCIe x16, 2xPCIe x1</span>
+            </div>
+            <!-- ko if: $data.position && $data.position.comment -->
+            <div class="cart-product__additional">
+                <span data-bind="text: $data.position.comment">Код 
+товара: 137093 - Retail  Грамотная консультация. Доставка по РБ. Оплата 
+по безналу, картой и ЕРИП. Кредит. Самовывоз ст. м. Фрунзенская. 
+Socket.by - свыше 45000 товаров. Скидки постоянным клиентам и участникам
+ группы vk.com/socketby</span>
+            </div>
+            <!-- /ko -->
+
+            <!-- ko if: $root.positionsList.options.template.comment --><!-- /ko -->
+        </div>
+        <div class="cart-product__part cart-product__part_3">
+            <div class="cart-product-add-box">
+                <span class="button-style button-style_auxiliary button-style_small cart-product-add-box__button cart-product-add-box__button_remove button-style_disabled" data-bind="click: $root.positionsList.addQuantity.bind($root.positionsList, $data, -1),
+                                 css: {'button-style_disabled': $data.quantity() === '' || $data.quantity() &lt;= 1}"></span>
+                <span class="cart-product-add-box__control">
+                    <input placeholder="" maxlength="2" class="input-style input-style_primary input-style_small cart-product-add-box__input" data-bind="value: $data.quantity,
+                                      valueUpdate: 'input',
+                                      event: {'blur': $root.positionsList.blurQuantityInput.bind($root.positionsList, $data)},
+                                      css: {'input-style_disabled': !$data.position}" value="1" type="text">
+                </span>
+                <span class="button-style button-style_auxiliary button-style_small cart-product-add-box__button cart-product-add-box__button_add" data-bind="click: $root.positionsList.addQuantity.bind($root.positionsList, $data, 1),
+                                 css: {'button-style_disabled': $data.quantity() === '' || $data.quantity() &gt;= 10}"></span>
+            </div>
+        </div>
+        <div class="cart-product__part cart-product__part_4">
+
+            <!-- ko if: !$data.position --><!-- /ko -->
+
+            <!-- ko if: $data.position -->
+                <div class="cart-product__price">
+                    <span class="cart-product__price-value cart-product__price-value_primary">
+                        <span data-bind="html: $root.format.positionPrice($data.position.position_price)">94,77&nbsp;р.</span>
+                    </span>
+                </div>
+
+                <!-- ko if: !error() -->
+                <div class="cart-product-note">
+                    <!-- ko template: {name: 'template-cart-position-delivery', data: $data.position.delivery} -->
+    <div>
+        <!-- ko if: !$data.town.time && !$data.country.time --><!-- /ko -->
+
+        <!-- ko if: $data.town.time || $data.country.time -->
+        Доставка
+
+        <!-- ko if: $data.town.time -->
+        по&nbsp;городу&nbsp;— в&nbsp;течение <span data-bind="html: $data.town.time === 1 ? 'дня' : $data.town.time + '&nbsp;' + $root.format.pluralForm($data.town.time, ['дня', 'дней', 'дней'])">дня</span>,
+        <span data-bind="html: $data.town.price ? ('стоимость&nbsp;— ' + $root.format.positionPrice($data.town.delivery_price)) : 'бесплатная.'">стоимость&nbsp;— 4,00&nbsp;р.</span>
+        <!-- /ko -->
+
+        <!-- ko if: !$data.town.time --><!-- /ko -->
+
+        Доставка
+
+        <!-- ko if: $data.country.time -->
+        по&nbsp;Беларуси&nbsp;— в&nbsp;течение <span data-bind="html: $data.country.time === 1 ? 'дня' : $data.country.time + '&nbsp;' + $root.format.pluralForm($data.country.time, ['дня', 'дней', 'дней'])">2&nbsp;дней</span>,
+        <span data-bind="html: $data.country.price ? ('стоимость от&nbsp;' + $root.format.positionPrice($data.country.delivery_price)) : 'бесплатная.'">стоимость от&nbsp;14,00&nbsp;р.</span>
+        <!-- /ko -->
+
+        <!-- ko if: !$data.country.time --><!-- /ko -->
+
+        <!-- /ko -->
+    </div>
+<!-- /ko -->
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: error() --><!-- /ko -->
+
+            <!-- /ko -->
+        </div>
+        <div class="cart-product__part cart-product__part_5">
+            <a class="cart-product__remove" title="Удалить" data-bind="click: $root.positionsList.removePosition.bind($root.positionsList, $data)"></a>
+        </div>
+    </div>
+<!-- /ko -->
+                        <!-- /ko -->
+
+                    </div>
+
+                    <!-- ko if: $root.positionsList.groups().length > 1 --><!-- /ko -->
+
+                </div>
+
+            </div>
+            <!-- /ko -->
+
+        </div>
+
+        <div class="cart-navigation">
+            <div class="cart-navigation__part cart-navigation__part_1"></div>
+            <div class="cart-navigation__part cart-navigation__part_2">
+                <!-- ko if: $root.positionsList.total().quantity && $root.positionsList.total().composite_price -->
+                <div class="cart-navigation__sum">
+                    <span class="cart-navigation__sum-value cart-navigation__sum-value_primary">
+                        Итого:
+                        <span data-bind="text: $root.positionsList.total().quantity">6</span>
+                        <span data-bind="text: $root.format.pluralForm($root.positionsList.total().quantity, ['товар', 'товара', 'товаров'])">товаров</span>
+
+                        на&nbsp;сумму
+                        <span data-bind="html: $root.format.positionPrice($root.positionsList.total().composite_price)">798,38&nbsp;р.</span>
+                    </span>
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: $root.isAuth -->
+                <a class="button-style button-style_secondary button-style_arrow-right button-style_big cart-navigation__button cart-navigation__button_сheckout" data-bind="css: {'button-style_disabled': !$root.positionsList.total().quantity || !$root.positionsList.total().price},
+                              click: $root.order.bind($root, undefined)" onclick="ga('catalogContext.send', 'event', 'Knopka', 'VesZakaz');">
+                    Оформить весь заказ
+                </a>
+                <!-- /ko -->
+
+                <!-- ko if: !$root.isAuth --><!-- /ko -->
+
+                <div class="cart-navigation-note">
+                    На&nbsp;следующем этапе вы&nbsp;сможете оставить сообщения продавцам
+                </div>
+            </div>
+        </div>
+        <!-- /ko -->
+
+        <!-- ko if: $root.positionsList.status() === 'complete' && !$root.positionsList.groups().length --><!-- /ko -->
+
+        <!-- ko if: $root.positionsList.status() === 'loading' --><!-- /ko -->
+
+    </div>
+
+    <div data-popup-id="cart-auth-popup" class="popup-style popup-style_primary popup-style_big cart-popup js-popup-style">
+    <span class="popup-style__close js-popup-style-button-close"></span>
+
+    <div class="popup-style__content">
+        <div class="cart-popup__line">
+            <div class="cart-popup__title">
+                Войдите на&nbsp;сайт
+            </div>
+            <div class="cart-popup__description">
+                Прежде чем продолжить оформление покупки, вам необходимо войти
+                на&nbsp;сайт под&nbsp;своим аккаунтом или зарегистрировать новый.<br>
+                <strong>Ваш заказ будет сохранен</strong>
+            </div>
+        </div>
+        <div class="cart-popup__line cart-popup__line_extended">
+            <div class="cart-popup__part cart-popup__part_1">
+                <a class="button-style button-style_primary button-style_big cart-popup__button cart-popup__button_login js-popup-style-button-close" href="#login" onclick="MODELS.AuthController.showModalAuth('login')">
+                    Войти
+                </a>
+                <a class="button-style button-style_auxiliary button-style_big cart-popup__button cart-popup__button_registration js-popup-style-button-close" href="#registration" onclick="MODELS.AuthController.showModalAuth('registration')">
+                    Зарегистрироваться
+                </a>
+                <div class="cart-popup__explanation">
+                    Займет всего<br>
+                    40&nbsp;секунд
+                </div>
+            </div>
+            <div class="cart-popup__part cart-popup__part_2">
+                <div class="auth-social">
+                    <div class="auth-social__buttons" id="cart-auth-popup__networks">
+                        <a class="auth-social__button auth-social__button--facebook auth__icon auth__icon--facebook js-cart-auth-social-button" title="Facebook" data-bind="click: $root.auth.bind($root, 'facebook')"></a>
+                        <a class="auth-social__button auth-social__button--vk auth__icon auth__icon--vk js-cart-auth-social-button" title="Vkontakte" data-bind="click: $root.auth.bind($root, 'vkontakte')"></a>
+                        <a class="auth-social__button auth-social__button--twitter auth__icon auth__icon--twitter js-cart-auth-social-button" title="Twitter" data-bind="click: $root.auth.bind($root, 'twitter')"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-popup__line cart-popup__line_divided">
+            <div class="cart-popup__sub-title">
+                Преимущества регистрации
+            </div>
+            <ol class="cart-popup__list">
+                <li>
+                    Мы&nbsp;сохраним введенные вами данные для следующих покупок
+                </li>
+                <li>
+                    Вы&nbsp;сможете управлять и&nbsp;отслеживать статус заказов онлайн
+                </li>
+                <li>
+                    У&nbsp;вас будет доступ к&nbsp;истории ваших заказов во&nbsp;всех магазинах
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div class="popup-style__overlay popup-style__overlay_primary js-popup-style-overlay"></div>
+
+    <script type="text/html" id="template-cart-position">
+    <div class="cart-product"
+         data-bind="css: {'cart-product_disabled': !$data.position, 'cart-product_error': error()},
+                    attr: {id: 'cart-product-' + $data.id}">
+        <div class="cart-product__part cart-product__part_1">
+
+            <!-- ko template: {name: 'template-cart-position-preview', data: $data.product} -->
+            <!-- /ko -->
+
+        </div>
+        <div class="cart-product__part cart-product__part_2">
+            <div class="cart-product-title">
+                <div class="cart-product-title__link cart-product-title__link_name">
+                    <span data-bind="html: $data.product.full_name"></span>
+                </div>
+            </div>
+
+            <div class="cart-product__description">
+                <span data-bind="html: $data.product.description"></span>
+            </div>
+            <!-- ko if: $data.position && $data.position.comment -->
+            <div class="cart-product__additional">
+                <span data-bind="text: $data.position.comment"></span>
+            </div>
+            <!-- /ko -->
+
+            <!-- ko if: $root.positionsList.options.template.comment -->
+            <div class="cart-product-comment">
+                <span class="cart-product-comment__trigger">
+                    Написать комментарий продавцу
+                </span>
+
+                <div class="cart-product-comment__collapse">
+                    <textarea class="input-style input-style_primary input-style_base cart-product-comment__input"
+                              maxlength="500" data-bind="value: $data.user_comment"></textarea>
+                </div>
+            </div>
+            <!-- /ko -->
+        </div>
+        <div class="cart-product__part cart-product__part_3">
+            <div class="cart-product-add-box">
+                <span class="button-style button-style_auxiliary button-style_small cart-product-add-box__button cart-product-add-box__button_remove"
+                      data-bind="click: $root.positionsList.addQuantity.bind($root.positionsList, $data, -1),
+                                 css: {'button-style_disabled': $data.quantity() === '' || $data.quantity() <= 1}"></span>
+                <span class="cart-product-add-box__control">
+                    <input type="text" placeholder="" maxlength="2"
+                           class="input-style input-style_primary input-style_small cart-product-add-box__input"
+                           data-bind="value: $data.quantity,
+                                      valueUpdate: 'input',
+                                      event: {'blur': $root.positionsList.blurQuantityInput.bind($root.positionsList, $data)},
+                                      css: {'input-style_disabled': !$data.position}">
+                </span>
+                <span class="button-style button-style_auxiliary button-style_small cart-product-add-box__button cart-product-add-box__button_add"
+                      data-bind="click: $root.positionsList.addQuantity.bind($root.positionsList, $data, 1),
+                                 css: {'button-style_disabled': $data.quantity() === '' || $data.quantity() >= 10}"></span>
+            </div>
+        </div>
+        <div class="cart-product__part cart-product__part_4">
+
+            <!-- ko if: !$data.position -->
+                <div class="cart-product-note cart-product-note_out-stock">Нет в&nbsp;наличии</div>
+            <!-- /ko -->
+
+            <!-- ko if: $data.position -->
+                <div class="cart-product__price">
+                    <span class="cart-product__price-value cart-product__price-value_primary">
+                        <span data-bind="html: $root.format.positionPrice($data.position.position_price)"></span>
+                    </span>
+                </div>
+
+                <!-- ko if: !error() -->
+                <div class="cart-product-note">
+                    <!-- ko template: {name: 'template-cart-position-delivery', data: $data.position.delivery} -->
+                    <!-- /ko -->
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: error() -->
+                <div class="cart-product-note cart-product-note_out-stock">
+                    <span data-bind="html: error"></span>
+                </div>
+                <!-- /ko -->
+
+            <!-- /ko -->
+        </div>
+        <div class="cart-product__part cart-product__part_5">
+            <a class="cart-product__remove" title="Удалить"
+               data-bind="click: $root.positionsList.removePosition.bind($root.positionsList, $data)"></a>
+        </div>
+    </div>
+</script>
+    <script type="text/html" id="template-cart-position-preview">
+
+    <!-- ko if: $data.images.header -->
+    <div class="cart-product__preview">
+        <img data-bind="attr: {src: $data.images.header, alt: $data.full_name, title: $data.full_name}"
+             class="cart-product__image">
+    </div>
+    <!-- /ko -->
+
+    <!-- ko if: !$data.images.header -->
+    <div class="cart-product__preview"></div>
+    <!-- /ko -->
+
+</script>
+    <script type="text/html" id="template-cart-position-delivery">
+    <div>
+        <!-- ko if: !$data.town.time && !$data.country.time -->
+        Доставка не&nbsp;осуществляется.
+        <!-- /ko -->
+
+        <!-- ko if: $data.town.time || $data.country.time -->
+        Доставка
+
+        <!-- ko if: $data.town.time -->
+        по&nbsp;городу&nbsp;— в&nbsp;течение <span data-bind="html: $data.town.time === 1 ? 'дня' : $data.town.time + '&nbsp;' + $root.format.pluralForm($data.town.time, ['дня', 'дней', 'дней'])"></span>,
+        <span data-bind="html: $data.town.price ? ('стоимость&nbsp;— ' + $root.format.positionPrice($data.town.delivery_price)) : 'бесплатная.'"></span>
+        <!-- /ko -->
+
+        <!-- ko if: !$data.town.time -->
+        по&nbsp;городу не&nbsp;осуществляется.
+        <!-- /ko -->
+
+        Доставка
+
+        <!-- ko if: $data.country.time -->
+        по&nbsp;Беларуси&nbsp;— в&nbsp;течение <span data-bind="html: $data.country.time === 1 ? 'дня' : $data.country.time + '&nbsp;' + $root.format.pluralForm($data.country.time, ['дня', 'дней', 'дней'])"></span>,
+        <span data-bind="html: $data.country.price ? ('стоимость от&nbsp;' + $root.format.positionPrice($data.country.delivery_price)) : 'бесплатная.'"></span>
+        <!-- /ko -->
+
+        <!-- ko if: !$data.country.time -->
+        по&nbsp;Беларуси не&nbsp;осуществляется.
+        <!-- /ko -->
+
+        <!-- /ko -->
+    </div>
+</script>
+    <script type="text/html" id="template-cart-position-header">
+    <div class="cart-panel-header">
+
+        <!-- ko if: $data -->
+        <div class="cart-panel-header__part cart-panel-header__part_1">
+
+            <!-- ko if: $data.logo -->
+            <div class="cart-panel-header__preview">
+                <img class="cart-panel-header__image" data-bind="attr: {src: $data.logo, alt: $data.title}">
+            </div>
+            <!-- /ko -->
+
+            <!-- ko if: !$data.logo -->
+            <div class="cart-panel-header__preview cart-panel-header__preview_text">
+                <b data-bind="text: $data.title"></b>
+            </div>
+            <!-- /ko -->
+
+            <!-- ko if: $data.reviews && $data.reviews.count -->
+            <div class="cart-panel-header-rating">
+                <span data-bind="attr: {class: 'cart-panel-header-rating__stars rating rating_' + Math.round($data.reviews.rating * 10 / 5) * 5}"></span>
+                <span class="cart-panel-header-rating__counts">
+                    <span data-bind="text: $data.reviews.count"></span>
+                    <span data-bind="text: $root.format.pluralForm($data.reviews.count, ['отзыв', 'отзыва', 'отзывов'])"></span>
+                </span>
+            </div>
+            <!-- /ko -->
+
+        </div>
+        <div class="cart-panel-header__part cart-panel-header__part_2">
+
+            <!-- ko if: $data.order_processing_text -->
+            <div class="cart-panel-header__time cart-panel-header__time_process">
+                <span data-bind="text: $data.order_processing_text"></span>
+            </div>
+            <!-- /ko -->
+
+            <!-- ko if: $root.positionsList.options.template.contacts -->
+            <!-- ko if: $data.display_address -->
+            <div class="cart-panel-header-contact" data-bind="with: $data.display_address">
+
+                <span class="cart-panel-header-contact__trigger">Контакты продавца</span>
+
+                <div class="cart-panel-header-contact__popover">
+                    <ul class="cart-panel-header-contact__list">
+
+                        <!-- ko foreach: {data: phones, as: 'phone'} -->
+                        <li class="cart-panel-header-contact__item cart-panel-header-contact__item_phone">
+                            <a class="cart-panel-header-contact__text" data-bind="attr: {href: 'tel:' + phone}">
+                                <nobr data-bind="html: $root.format.phoneToHtml(phone)"></nobr>
+                            </a>
+                        </li>
+                        <!-- /ko -->
+
+                        <!-- ko if: skype -->
+                        <li class="cart-panel-header-contact__item cart-panel-header-contact__item_skype">
+                            <a class="cart-panel-header-contact__link" data-bind="attr: {href: 'skype:' + skype + '?chat'}">
+                                <strong><nobr data-bind="text: skype"></nobr></strong>
+                            </a>
+                        </li>
+                        <!-- /ko -->
+
+                        <!-- ko if: whats_app -->
+                        <li class="cart-panel-header-contact__item cart-panel-header-contact__item_whatsapp">
+                            <span class="cart-panel-header-contact__text">
+                                <nobr data-bind="html: $root.format.phoneToHtml(whats_app)"></nobr>
+                            </span>
+                        </li>
+                        <!-- /ko -->
+
+                        <!-- ko if: telegram -->
+                        <li class="cart-panel-header-contact__item cart-panel-header-contact__item_telegram">
+                            <span class="cart-panel-header-contact__text">
+                                <nobr data-bind="html: $root.format.phoneToHtml(telegram)"></nobr>
+                            </span>
+                        </li>
+                        <!-- /ko -->
+
+                        <!-- ko if: viber -->
+                        <li class="cart-panel-header-contact__item cart-panel-header-contact__item_viber">
+                            <span class="cart-panel-header-contact__text">
+                                <nobr data-bind="html: $root.format.phoneToHtml(viber)"></nobr>
+                            </span>
+                        </li>
+                        <!-- /ko -->
+                    </ul>
+                </div>
+
+            </div>
+            <!-- /ko -->
+            <!-- /ko -->
+
+        </div>
+        <!-- /ko -->
+
+    </div>
+</script>
+
+    </div>
+
+        <script src="index_files/cart-main-079d1e0e61.js"></script>
+
+</div>
+</div>
+<!--/Middle-->
+</div><!-- /.l-gradient-wrapper -->
+</div>
+</div>
+<!--/Container-->
+
+<!--Bottom-->
+<footer class="g-bottom">
+    <div class="g-bottom-i">
+        <!--Footer-->
+        <div class="b-footer-2">
+            <div class="b-footer-2-i cfix">
+                <div class="b-footer-2-info">
+                    <span class="b-footert-info__copyright-2">© 2001—2017 Onliner.by</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/Footer-->
+</footer>
+<!--/Bottom-->
+
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var pp_gemius_identifier = new String("B8.gja_Lo5zCgGtl8IqkWZaGPzipEgeVWzlr0naEik7.i7");
+//--><!]]>
+</script>
+<script type="text/javascript" src="index_files/xgemius.js"></script><!-- Google Analytics -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-340679-1', 'auto', {userId: '328820'});
+    ga('send', 'pageview');
+
+    
+ga('create', 'UA-340679-50', 'auto', 'a', {userId: '328820'});
+    ga('a.send', 'pageview', []);
+
+ga('create', 'UA-340679-52', 'auto', 'catalogContext', {userId: '328820'});
+    ga('catalogContext.send', 'pageview', []);
+
+</script>
+<!-- End Google Analytics -->
+<img src="index_files/328820.htm" alt="" style="display:none;"><script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 924821186;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+</script>
+<div style="display:none">
+<script type="text/javascript" src="index_files/conversion.js">
+</script><iframe name="google_conversion_frame" title="Google conversion frame" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/924821186/?random=1489506991543&amp;cv=8&amp;fst=1489506991543&amp;num=1&amp;fmt=1&amp;guid=ON&amp;u_h=1080&amp;u_w=2560&amp;u_ah=1040&amp;u_aw=2560&amp;u_cd=24&amp;u_his=3&amp;u_tz=180&amp;u_java=true&amp;u_nplug=10&amp;u_nmime=55&amp;frm=0&amp;url=https%3A%2F%2Fcart.onliner.by%2F&amp;ref=https%3A%2F%2Fprofile.onliner.by%2Fmessages&amp;tiba=%D0%9A%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%BE%D0%B2%20onliner.by" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" height="13" frameborder="0" width="300"></iframe>
+<noscript>
+    <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/924821186/?value=0&amp;guid=ON&amp;script=0"/>
+    </div>
+</noscript>
+</div>
+
+
+
+<div id="fast-search-modal" class="modal" role="dialog" aria-hidden="true"><div class="modal-dialog"><div class="modal-content"><iframe class="modal-iframe" src="index_files/iframe.htm"></iframe></div></div></div><div><iframe id="cross-domain-iframe" src="index_files/cross-domain-local-storage.htm" style="display: none;"></iframe></div></body></html>
