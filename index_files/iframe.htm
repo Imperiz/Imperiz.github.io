@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="iframe_data/search.css">
 </head>
 <body class="no-touch">
-<div id="search-page" class="search" data-bind="css: {'search_filter': $root.activeSearchType() === 'news'}">
+<div id="search-page" class="search search_active-compare" data-bind="css: {'search_filter': $root.activeSearchType() === 'news'}">
 
     <div class="search__bar" data-bind="css: {'search__bar_searching': $root.resultsInstance().isSearching}">
         <div class="search__bar-wrapper">
@@ -311,7 +311,7 @@
 
     <div class="compare-button-container__inner">
 
-        <div class="compare-button" data-bind="css: {'compare-button_visible': $root.states.visible,
+        <div class="compare-button compare-button_visible" data-bind="css: {'compare-button_visible': $root.states.visible,
                               'compare-button_hidden': $root.states.hidden,
                               'compare-button_animated': $root.states.animated}">
             <div class="compare-button__inner-container">
@@ -325,7 +325,7 @@
                         </a>
 
                         <a class="compare-button__sub compare-button__sub_main" data-bind="click: $root.compareModel.open.bind($root.compareModel)">
-                            <span data-bind="html: $root.text">0&nbsp;товаров</span> в&nbsp;сравнении
+                            <span data-bind="html: $root.text">2&nbsp;товара</span> в&nbsp;сравнении
                         </a>
                     </div>
 

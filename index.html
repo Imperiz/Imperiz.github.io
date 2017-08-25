@@ -95,7 +95,7 @@
                             <!-- ko if: $root.cartQuantity() !== undefined && $root.cartQuantity() > 0 -->
                             <div class="b-top-profile__subitem b-top-profile__subitem_basket">
                                 <a href="https://cart.onliner.by/" class="b-top-profile__link b-top-profile__link_alter">
-                                    <span data-bind="text: $root.cartQuantity() + ' ' + format.pluralForm($root.cartQuantity(), ['товар в корзине', 'товара в корзине', 'товаров в корзине'])">10 товаров в корзине</span>
+                                    <span data-bind="text: $root.cartQuantity() + ' ' + format.pluralForm($root.cartQuantity(), ['товар в корзине', 'товара в корзине', 'товаров в корзине'])">11 товаров в корзине</span>
                                 </a>
                             </div>
                             <!-- /ko -->
@@ -294,13 +294,13 @@
 
         var networks = window.userbar.socialNetworksAuth.networks;
 
-        networks.facebook.sessionId = 'F1Tc5gOANjLQSGnkCV0U';
-        networks.vkontakte.sessionId = 'larz75mQIGJwqFtZDkhT';
-        networks.twitter.sessionId = 'KTE8PlopSDMrYcIiBW6X';
+        networks.facebook.sessionId = 'iVBQ7XFotqp0CnujSbOH';
+        networks.vkontakte.sessionId = 'sW7VDovPnuAqjkQ6HRG0';
+        networks.twitter.sessionId = 'e0uQ6EMwqYKl5iIo4baR';
 
-        networks.facebook.url = "https://user.api.onliner.by/socials/facebook/login?session_id=F1Tc5gOANjLQSGnkCV0U";
-        networks.vkontakte.url = "https://user.api.onliner.by/socials/vkontakte/login?session_id=larz75mQIGJwqFtZDkhT";
-        networks.twitter.url = "https://user.api.onliner.by/socials/twitter/login?session_id=KTE8PlopSDMrYcIiBW6X";
+        networks.facebook.url = "https://user.api.onliner.by/socials/facebook/login?session_id=iVBQ7XFotqp0CnujSbOH";
+        networks.vkontakte.url = "https://user.api.onliner.by/socials/vkontakte/login?session_id=sW7VDovPnuAqjkQ6HRG0";
+        networks.twitter.url = "https://user.api.onliner.by/socials/twitter/login?session_id=e0uQ6EMwqYKl5iIo4baR";
 
         ko.applyBindings(window.userbar, document.getElementById('userbar'));
 
@@ -771,6 +771,111 @@
                         
                         <!-- ko template: {name: 'template-cart-position'} -->
     <div class="cart-product" data-bind="css: {'cart-product_disabled': !$data.position, 'cart-product_error': error()},
+                    attr: {id: 'cart-product-' + $data.id}" id="cart-product-788760">
+        <div class="cart-product__part cart-product__part_1">
+
+            <!-- ko template: {name: 'template-cart-position-preview', data: $data.product} -->
+
+    <!-- ko if: $data.images.header -->
+    <div class="cart-product__preview">
+        <img data-bind="attr: {src: $data.images.header, alt: $data.full_name, title: $data.full_name}" class="cart-product__image" src="index_files/026ce2c4604ab0756dbc4c0bf4228b34.jpg" alt="Fractal Design Define S Window (FD-CA-DEF-S-BK-W)" title="Fractal Design Define S Window (FD-CA-DEF-S-BK-W)">
+    </div>
+    <!-- /ko -->
+
+    <!-- ko if: !$data.images.header --><!-- /ko -->
+
+<!-- /ko -->
+
+        </div>
+        <div class="cart-product__part cart-product__part_2">
+            <div class="cart-product-title">
+                <div class="cart-product-title__link cart-product-title__link_name">
+                    <span data-bind="html: $data.product.full_name">Fractal Design Define S Window (FD-CA-DEF-S-BK-W)</span>
+                </div>
+            </div>
+
+            <div class="cart-product__description">
+                <span data-bind="html: $data.product.description">без блока питания, геймерский, Tower, для плат ATX, блок питания снизу, 2 вентилятора, 0xUSB 2.0, 2xUSB 3.0, цвет черный</span>
+            </div>
+            <!-- ko if: $data.position && $data.position.comment -->
+            <div class="cart-product__additional">
+                <span data-bind="text: $data.position.comment">Код 
+товара: 112204.  Грамотная консультация. Оплата по безналу, картой и 
+ЕРИП. Кредит. Самовывоз по предзаказу ст. м. Фрунзенская. Ассортимент 
+свыше 50.000 товаров. Работаем без выходных.</span>
+            </div>
+            <!-- /ko -->
+
+            <!-- ko if: $root.positionsList.options.template.comment --><!-- /ko -->
+        </div>
+        <div class="cart-product__part cart-product__part_3">
+            <div class="cart-product-add-box">
+                <span class="button-style button-style_auxiliary button-style_small cart-product-add-box__button cart-product-add-box__button_remove button-style_disabled" data-bind="click: $root.positionsList.addQuantity.bind($root.positionsList, $data, -1),
+                                 css: {'button-style_disabled': $data.quantity() === '' || $data.quantity() &lt;= 1}"></span>
+                <span class="cart-product-add-box__control">
+                    <input placeholder="" maxlength="2" class="input-style input-style_primary input-style_small cart-product-add-box__input" data-bind="value: $data.quantity,
+                                      valueUpdate: 'input',
+                                      event: {'blur': $root.positionsList.blurQuantityInput.bind($root.positionsList, $data)},
+                                      css: {'input-style_disabled': !$data.position}" value="1" type="text">
+                </span>
+                <span class="button-style button-style_auxiliary button-style_small cart-product-add-box__button cart-product-add-box__button_add" data-bind="click: $root.positionsList.addQuantity.bind($root.positionsList, $data, 1),
+                                 css: {'button-style_disabled': $data.quantity() === '' || $data.quantity() &gt;= 10}"></span>
+            </div>
+        </div>
+        <div class="cart-product__part cart-product__part_4">
+
+            <!-- ko if: !$data.position --><!-- /ko -->
+
+            <!-- ko if: $data.position -->
+                <div class="cart-product__price">
+                    <span class="cart-product__price-value cart-product__price-value_primary">
+                        <span data-bind="html: $root.format.positionPrice($data.position.position_price)">214,60&nbsp;р.</span>
+                    </span>
+                </div>
+
+                <!-- ko if: !error() -->
+                <div class="cart-product-note">
+                    <!-- ko template: {name: 'template-cart-position-delivery', data: $data.position.delivery} -->
+    <div>
+        <!-- ko if: !$data.town.time && !$data.country.time --><!-- /ko -->
+
+        <!-- ko if: $data.town.time || $data.country.time -->
+        Доставка
+
+        <!-- ko if: $data.town.time -->
+        по&nbsp;городу&nbsp;— в&nbsp;течение <span data-bind="html: $data.town.time === 1 ? 'дня' : $data.town.time + '&nbsp;' + $root.format.pluralForm($data.town.time, ['дня', 'дней', 'дней'])">2&nbsp;дней</span>,
+        <span data-bind="html: $data.town.price ? ('стоимость&nbsp;— ' + $root.format.positionPrice($data.town.delivery_price)) : 'бесплатная.'">бесплатная.</span>
+        <!-- /ko -->
+
+        <!-- ko if: !$data.town.time --><!-- /ko -->
+
+        Доставка
+
+        <!-- ko if: $data.country.time -->
+        по&nbsp;Беларуси&nbsp;— в&nbsp;течение <span data-bind="html: $data.country.time === 1 ? 'дня' : $data.country.time + '&nbsp;' + $root.format.pluralForm($data.country.time, ['дня', 'дней', 'дней'])">2&nbsp;дней</span>,
+        <span data-bind="html: $data.country.price ? ('стоимость от&nbsp;' + $root.format.positionPrice($data.country.delivery_price)) : 'бесплатная.'">стоимость от&nbsp;14,00&nbsp;р.</span>
+        <!-- /ko -->
+
+        <!-- ko if: !$data.country.time --><!-- /ko -->
+
+        <!-- /ko -->
+    </div>
+<!-- /ko -->
+                </div>
+                <!-- /ko -->
+
+                <!-- ko if: error() --><!-- /ko -->
+
+            <!-- /ko -->
+        </div>
+        <div class="cart-product__part cart-product__part_5">
+            <a class="cart-product__remove" title="Удалить" data-bind="click: $root.positionsList.removePosition.bind($root.positionsList, $data)"></a>
+        </div>
+    </div>
+<!-- /ko -->
+                        
+                        <!-- ko template: {name: 'template-cart-position'} -->
+    <div class="cart-product" data-bind="css: {'cart-product_disabled': !$data.position, 'cart-product_error': error()},
                     attr: {id: 'cart-product-' + $data.id}" id="cart-product-788693">
         <div class="cart-product__part cart-product__part_1">
 
@@ -949,113 +1054,6 @@
 
         <!-- ko if: $data.town.time -->
         по&nbsp;городу&nbsp;— в&nbsp;течение <span data-bind="html: $data.town.time === 1 ? 'дня' : $data.town.time + '&nbsp;' + $root.format.pluralForm($data.town.time, ['дня', 'дней', 'дней'])">дня</span>,
-        <span data-bind="html: $data.town.price ? ('стоимость&nbsp;— ' + $root.format.positionPrice($data.town.delivery_price)) : 'бесплатная.'">бесплатная.</span>
-        <!-- /ko -->
-
-        <!-- ko if: !$data.town.time --><!-- /ko -->
-
-        Доставка
-
-        <!-- ko if: $data.country.time -->
-        по&nbsp;Беларуси&nbsp;— в&nbsp;течение <span data-bind="html: $data.country.time === 1 ? 'дня' : $data.country.time + '&nbsp;' + $root.format.pluralForm($data.country.time, ['дня', 'дней', 'дней'])">2&nbsp;дней</span>,
-        <span data-bind="html: $data.country.price ? ('стоимость от&nbsp;' + $root.format.positionPrice($data.country.delivery_price)) : 'бесплатная.'">стоимость от&nbsp;14,00&nbsp;р.</span>
-        <!-- /ko -->
-
-        <!-- ko if: !$data.country.time --><!-- /ko -->
-
-        <!-- /ko -->
-    </div>
-<!-- /ko -->
-                </div>
-                <!-- /ko -->
-
-                <!-- ko if: error() --><!-- /ko -->
-
-            <!-- /ko -->
-        </div>
-        <div class="cart-product__part cart-product__part_5">
-            <a class="cart-product__remove" title="Удалить" data-bind="click: $root.positionsList.removePosition.bind($root.positionsList, $data)"></a>
-        </div>
-    </div>
-<!-- /ko -->
-                        
-                        <!-- ko template: {name: 'template-cart-position'} -->
-    <div class="cart-product" data-bind="css: {'cart-product_disabled': !$data.position, 'cart-product_error': error()},
-                    attr: {id: 'cart-product-' + $data.id}" id="cart-product-788732">
-        <div class="cart-product__part cart-product__part_1">
-
-            <!-- ko template: {name: 'template-cart-position-preview', data: $data.product} -->
-
-    <!-- ko if: $data.images.header -->
-    <div class="cart-product__preview">
-        <img data-bind="attr: {src: $data.images.header, alt: $data.full_name, title: $data.full_name}" class="cart-product__image" src="index_files/cc324a23c8b09f8faf78892d6994ad09.jpg" alt="Zalman Z9 NEO Black" title="Zalman Z9 NEO Black">
-    </div>
-    <!-- /ko -->
-
-    <!-- ko if: !$data.images.header --><!-- /ko -->
-
-<!-- /ko -->
-
-        </div>
-        <div class="cart-product__part cart-product__part_2">
-            <div class="cart-product-title">
-                <div class="cart-product-title__link cart-product-title__link_name">
-                    <span data-bind="html: $data.product.full_name">Zalman Z9 NEO Black</span>
-                </div>
-            </div>
-
-            <div class="cart-product__description">
-                <span data-bind="html: $data.product.description">без 
-блока питания, геймерский, Tower, для плат ATX/micro-ATX/mini-ITX, блок 
-питания снизу, 5 вентиляторов, 2xUSB 2.0, 2xUSB 3.0, цвет черный</span>
-            </div>
-            <!-- ko if: $data.position && $data.position.comment -->
-            <div class="cart-product__additional">
-                <span data-bind="text: $data.position.comment">Код 
-товара: 121919.  Грамотная консультация. Оплата по безналу, картой и 
-ЕРИП. Кредит. Самовывоз по предзаказу ст. м. Фрунзенская. Ассортимент 
-свыше 50.000 товаров. Работаем без выходных.</span>
-            </div>
-            <!-- /ko -->
-
-            <!-- ko if: $root.positionsList.options.template.comment --><!-- /ko -->
-        </div>
-        <div class="cart-product__part cart-product__part_3">
-            <div class="cart-product-add-box">
-                <span class="button-style button-style_auxiliary button-style_small cart-product-add-box__button cart-product-add-box__button_remove button-style_disabled" data-bind="click: $root.positionsList.addQuantity.bind($root.positionsList, $data, -1),
-                                 css: {'button-style_disabled': $data.quantity() === '' || $data.quantity() &lt;= 1}"></span>
-                <span class="cart-product-add-box__control">
-                    <input placeholder="" maxlength="2" class="input-style input-style_primary input-style_small cart-product-add-box__input" data-bind="value: $data.quantity,
-                                      valueUpdate: 'input',
-                                      event: {'blur': $root.positionsList.blurQuantityInput.bind($root.positionsList, $data)},
-                                      css: {'input-style_disabled': !$data.position}" value="1" type="text">
-                </span>
-                <span class="button-style button-style_auxiliary button-style_small cart-product-add-box__button cart-product-add-box__button_add" data-bind="click: $root.positionsList.addQuantity.bind($root.positionsList, $data, 1),
-                                 css: {'button-style_disabled': $data.quantity() === '' || $data.quantity() &gt;= 10}"></span>
-            </div>
-        </div>
-        <div class="cart-product__part cart-product__part_4">
-
-            <!-- ko if: !$data.position --><!-- /ko -->
-
-            <!-- ko if: $data.position -->
-                <div class="cart-product__price">
-                    <span class="cart-product__price-value cart-product__price-value_primary">
-                        <span data-bind="html: $root.format.positionPrice($data.position.position_price)">136,89&nbsp;р.</span>
-                    </span>
-                </div>
-
-                <!-- ko if: !error() -->
-                <div class="cart-product-note">
-                    <!-- ko template: {name: 'template-cart-position-delivery', data: $data.position.delivery} -->
-    <div>
-        <!-- ko if: !$data.town.time && !$data.country.time --><!-- /ko -->
-
-        <!-- ko if: $data.town.time || $data.country.time -->
-        Доставка
-
-        <!-- ko if: $data.town.time -->
-        по&nbsp;городу&nbsp;— в&nbsp;течение <span data-bind="html: $data.town.time === 1 ? 'дня' : $data.town.time + '&nbsp;' + $root.format.pluralForm($data.town.time, ['дня', 'дней', 'дней'])">2&nbsp;дней</span>,
         <span data-bind="html: $data.town.price ? ('стоимость&nbsp;— ' + $root.format.positionPrice($data.town.delivery_price)) : 'бесплатная.'">бесплатная.</span>
         <!-- /ko -->
 
@@ -1634,7 +1632,7 @@
                         <span data-bind="text: $root.format.pluralForm($root.positionsList.total().quantity, ['товар', 'товара', 'товаров'])">товаров</span>
 
                         на&nbsp;сумму
-                        <span data-bind="html: $root.format.positionPrice($root.positionsList.total().composite_price)">3606,17&nbsp;р.</span>
+                        <span data-bind="html: $root.format.positionPrice($root.positionsList.total().composite_price)">3683,88&nbsp;р.</span>
                     </span>
                 </div>
                 <!-- /ko -->
@@ -2016,7 +2014,7 @@ ga('create', 'UA-340679-52', 'auto', 'catalogContext', {userId: '328820'});
 </script>
 <div style="display:none">
 <script type="text/javascript" src="index_files/conversion.js">
-</script><iframe name="google_conversion_frame" title="Google conversion frame" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/924821186/?random=1503662564100&amp;cv=8&amp;fst=1503662564100&amp;num=1&amp;fmt=1&amp;guid=ON&amp;u_h=1080&amp;u_w=2560&amp;u_ah=1040&amp;u_aw=2560&amp;u_cd=24&amp;u_his=2&amp;u_tz=180&amp;u_java=false&amp;u_nplug=1&amp;u_nmime=2&amp;frm=0&amp;url=https%3A%2F%2Fcart.onliner.by%2F&amp;ref=https%3A%2F%2Fcatalog.onliner.by%2Fchassis%2Fzalman%2Fz9neoblack&amp;tiba=%D0%9A%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%BE%D0%B2%20onliner.by" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" width="300" height="13" frameborder="0"></iframe>
+</script><iframe name="google_conversion_frame" title="Google conversion frame" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/924821186/?random=1503663306017&amp;cv=8&amp;fst=1503663306017&amp;num=1&amp;fmt=1&amp;guid=ON&amp;u_h=1080&amp;u_w=2560&amp;u_ah=1040&amp;u_aw=2560&amp;u_cd=24&amp;u_his=2&amp;u_tz=180&amp;u_java=false&amp;u_nplug=1&amp;u_nmime=2&amp;frm=0&amp;url=https%3A%2F%2Fcart.onliner.by%2F&amp;ref=https%3A%2F%2Fcatalog.onliner.by%2Fchassis%2Ffractal_design%2Ffdcadefsbkw&amp;tiba=%D0%9A%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D0%B0%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%BE%D0%B2%20onliner.by" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" width="300" height="13" frameborder="0"></iframe>
 <noscript>
     <div style="display:inline;">
         <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/924821186/?value=0&amp;guid=ON&amp;script=0"/>
